@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/githubactions_codenoobs/static/css/main.49a04fff.chunk.css",
+    "main.js": "/githubactions_codenoobs/static/js/main.888f27f8.chunk.js",
+    "main.js.map": "/githubactions_codenoobs/static/js/main.888f27f8.chunk.js.map",
+    "runtime-main.js": "/githubactions_codenoobs/static/js/runtime-main.ca8dfeeb.js",
+    "runtime-main.js.map": "/githubactions_codenoobs/static/js/runtime-main.ca8dfeeb.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/githubactions_codenoobs/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.ea38fd19.chunk.js": "/githubactions_codenoobs/static/js/2.ea38fd19.chunk.js",
+    "static/js/2.ea38fd19.chunk.js.map": "/githubactions_codenoobs/static/js/2.ea38fd19.chunk.js.map",
+    "index.html": "/githubactions_codenoobs/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/githubactions_codenoobs/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.49a04fff.chunk.css.map": "/githubactions_codenoobs/static/css/main.49a04fff.chunk.css.map",
+    "static/js/2.ea38fd19.chunk.js.LICENSE.txt": "/githubactions_codenoobs/static/js/2.ea38fd19.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca8dfeeb.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.ea38fd19.chunk.js",
+    "static/css/main.49a04fff.chunk.css",
+    "static/js/main.888f27f8.chunk.js"
+  ]
+}
