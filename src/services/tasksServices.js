@@ -48,6 +48,7 @@ export const getTask = (data) =>
   mockedTasks.find((task) => task.id === data.id);
 
 export const createTask = (data) => {
+  data.id = uuidv4().toString();
   data.CreatedDateTime = new Date().toLocaleString();
   mockedTasks.push(data);
 };
