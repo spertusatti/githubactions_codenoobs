@@ -9,6 +9,7 @@ export const initStorage = () =>
 export const getAllTasks = () => JSON.parse(localStorage.getItem(STORAGE_KEY));
 
 export const createTask = (data) => {
+  data.id = uuidv4().toString();
   data.CreatedDateTime = new Date().toLocaleString();
   let allTasks = getAllTasks();
   allTasks.push(data);
