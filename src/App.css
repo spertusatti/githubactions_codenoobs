@@ -8,3 +8,10 @@
 .btncenter {
   text-align: center;
 }
+
+.app {
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}

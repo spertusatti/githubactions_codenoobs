@@ -38,20 +38,19 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <Header />
-      <div className="container mt-4">
-        <div className="row">
-          <div className="col-md-12">
-            <CreateTask taskCreated={taskCreated} />
+    <div className="app">
+      <div>
+        <Header />
+        <div className="container mt-4">
+          <div className="row">
+            <div className="col-md-12">
+              <CreateTask taskCreated={taskCreated} />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="container mt-4">
-        <TasksTable
-          tasks={tasks}
-          showEditModalHandler={showEditModalHandler}
-          deleteHandler={deleteTaskHandler} />
+        <div className="container mt-4">
+          <TasksTable tasks={tasks} showEditModalHandler={showEditModalHandler} deleteHandler={deleteTaskHandler} />
+        </div>
       </div>
       <Footer />
     </div>
