@@ -5,10 +5,13 @@
   text-align: center;
 }
 
-.mrgnbtm {
-  margin-top: 20px;
-}
-
 .btncenter {
   text-align: center;
+}
+
+.app {
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
 }
