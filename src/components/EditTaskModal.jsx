@@ -4,12 +4,12 @@ import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import { updateTask } from "../services/tasksServices";
 
-export const EditTaskModal = ({ task, taskEdited }) => {
+export const EditTaskModal = ({ task, showEditModalHandler }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
     const { id, CreatedDateTime } = task;
@@ -20,7 +20,7 @@ export const EditTaskModal = ({ task, taskEdited }) => {
     };
 
     const response = updateTask(updatedTask);
-    taskEdited(response);
+    showEditModalHandler(response);
     setShow(false);
   };
 
@@ -45,10 +45,11 @@ export const EditTaskModal = ({ task, taskEdited }) => {
                   name="AssignedTo"
                   id="AssignedTo"
                   aria-describedby="emailHelp"
-                  ref={register}
+                  ref={register({ required: true })}
                   placeholder="Name of worker"
                   data-testid="AssignedTo"
                 />
+                {errors.AssignedTo && <p>This field is required ❗</p>}
               </div>
               <div className="form-group col-md-6">
                 <label>Grop of Creation:</label>

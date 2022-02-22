@@ -1,4 +1,4 @@
-import { getAllTasks, deleteTask } from "./services/tasksServices";
+import { initStorage, getAllTasks, deleteTask } from "./services/tasksServices";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { TasksTable } from "./components/TasksTable";
@@ -20,11 +20,15 @@ const App = () => {
   };
 
   useEffect(() => {
+    initStorage();
+  }, []);
+
+  useEffect(() => {
     fetchData.current();
     setTaskEdited(false);
   }, [fetchData, numberOfTasks, isTaskEdited]);
 
-  const taskEdited = (data) => setTaskEdited(data.isEdited);
+  const showEditModalHandler = (data) => setTaskEdited(data.isEdited);
 
   const taskCreated = () => setNumberOfTasks(numberOfTasks + 1);
 
@@ -45,7 +49,7 @@ const App = () => {
           </div>
         </div>
         <div className="container mt-4">
-          <TasksTable tasks={tasks} taskEdited={taskEdited} deleteHandler={deleteTaskHandler} />
+          <TasksTable tasks={tasks} showEditModalHandler={showEditModalHandler} deleteHandler={deleteTaskHandler} />
         </div>
       </div>
       <Footer />
